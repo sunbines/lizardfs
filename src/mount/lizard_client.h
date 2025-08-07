@@ -213,15 +213,10 @@ struct FsInitParams {
  * removed when a file is closed.
  */
 struct FileInfo {
-	FileInfo() : flags(), direct_io(), keep_cache(), fh(), lock_owner() {}
+	FileInfo(): flags(), direct_io(), keep_cache(), fh(), lock_owner() {}
 
-	FileInfo(int flags, unsigned int direct_io, unsigned int keep_cache, uint64_t fh,
-		uint64_t lock_owner)
-			: flags(flags),
-			direct_io(direct_io),
-			keep_cache(keep_cache),
-			fh(fh),
-			lock_owner(lock_owner) {
+	FileInfo(int flags, unsigned int direct_io, unsigned int keep_cache, uint64_t fh, uint64_t lock_owner)
+		: flags(flags), direct_io(direct_io), keep_cache(keep_cache), fh(fh), lock_owner(lock_owner) {
 	}
 
 	FileInfo(const FileInfo &other) = default;

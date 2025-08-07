@@ -62,8 +62,7 @@ public:
 	struct FileInfo : public LizardClient::FileInfo, public boost::intrusive::list_base_hook<> {
 		FileInfo() {}
 		FileInfo(Inode inode, uint64_t opendirSessionID = 0)
-			: inode(inode)
-			, opendirSessionID(opendirSessionID) {
+			: inode(inode), opendirSessionID(opendirSessionID) {
 		}
 		Inode inode;
 		uint64_t opendirSessionID;

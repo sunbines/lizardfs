@@ -17,7 +17,6 @@
  */
 
 #include "common/platform.h"
-
 #include "client/lizard_client_c_linkage.h"
 
 typedef LizardClient::EntryParam EntryParam;
